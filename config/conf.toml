@@ -1,0 +1,16 @@
+[credentials-master] # UploadData
+username = ""
+password = ""
+authSource = ""  # database untuk otentikasi (db-name)
+host = "localhost"
+port = "27017"
+collection = ""
+
+
+[credentials-virgin] # StreamlitConsume
+username = ""
+password = ""
+authSource = ""  # database untuk otentikasi (db-name)
+host = "localhost"
+port = "27017"
+collection = ""
