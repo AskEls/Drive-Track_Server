@@ -142,19 +142,6 @@ class MyHandler(FileSystemEventHandler):
                 print('Uploading to MongoDB...')
                 collection.insert_one(document)
                 print('Data inserted successfully.')
-               '''
-                # Update the 'city' field for each record in the database
-                for record in data:
-                    lat = record['latitude']
-                    lon = record['longitude']
-                    city_name = await self.get_country_async(lat, lon)
-                    if city_name:
-                        collection.update_one(
-                            {'_id': record['_id']},  # Assuming _id is the unique identifier for each record
-                            {'$set': {'city': city_name}}
-                        )
-                        print(f'Updated city for record {_id}: {city_name}')
-                '''
             except Exception as e:
                 print(f"Error occurred: {e}")
 
